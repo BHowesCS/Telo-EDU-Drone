@@ -44,7 +44,7 @@ recvThread.start()
 # CREATE FUNCTIONS HERE....
 
 
-print("\nBen Howes, Zachary Villarimi")
+print("\nBen Howes, Zachary Villarimo")
 print("Program Name:Somthing ")
 print("Date:4/6/2022 ")
 print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
@@ -57,11 +57,12 @@ try:
         print("\nStarting Drone!\n")
 
         sendmsg('command', 0)
+
         sendmsg('takeoff')
-        sendmsg("speed 50",8)
-        sendmsg("rc -10 30 21 0",8)
-        sendmsg("rc -10 20 23 0",8)
-        sendmsg("curve 75 150 0 10 330 0 50")
+        sendmsg("speed 75",8)
+        sendmsg("rc -5 30 20 0",8)
+        sendmsg("rc -10 17 15 0",8)
+        sendmsg("curve 100 125 0 -10 275 0 75" ,8)
         sendmsg("rc 0 -30 -10 0")
         sendmsg('land')
 
